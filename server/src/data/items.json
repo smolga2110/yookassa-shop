@@ -1,0 +1,74 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "category": "Смартфоны",
+      "name": "iPhone 15 Pro",
+      "price": 109999.00,
+      "in_stock": true
+    },
+    {
+      "id": 2,
+      "category": "Ноутбуки",
+      "name": "MacBook Air M2",
+      "price": 129999.00,
+      "in_stock": false
+    },
+    {
+      "id": 3,
+      "category": "Аксессуары",
+      "name": "Чехол для телефона",
+      "price": 1999.00,
+      "in_stock": true
+    },
+    {
+      "id": 4,
+      "category": "Телевизоры",
+      "name": "Samsung QLED 55\"",
+      "price": 78999.00,
+      "in_stock": true
+    },
+    {
+      "id": 5,
+      "category": "Наушники",
+      "name": "Sony WH-1000XM5",
+      "price": 34999.00,
+      "in_stock": true
+    },
+    {
+      "id": 6,
+      "category": "Фотокамеры",
+      "name": "Canon EOS R6",
+      "price": 189999.00,
+      "in_stock": false
+    },
+    {
+      "id": 7,
+      "category": "Игровые консоли",
+      "name": "PlayStation 5",
+      "price": 65999.00,
+      "in_stock": true
+    },
+    {
+      "id": 8,
+      "category": "Умные часы",
+      "name": "Apple Watch Series 9",
+      "price": 45999.00,
+      "in_stock": true
+    },
+    {
+      "id": 9,
+      "category": "Планшеты",
+      "name": "iPad Air 5",
+      "price": 72999.00,
+      "in_stock": true
+    },
+    {
+      "id": 10,
+      "category": "Аксессуары",
+      "name": "Внешний аккумулятор 20000 mAh",
+      "price": 3499.00,
+      "in_stock": true
+    }
+  ]
+}

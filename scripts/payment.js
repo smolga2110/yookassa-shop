@@ -1,5 +1,4 @@
 async function ready() {
-    /*
     try{
         const response = await fetch("http://localhost:3000/checkout")
         const result = await response.text()
@@ -14,8 +13,6 @@ async function ready() {
         console.error(err)
         throw err
     }
-    */
-   document.body.innerHTML = "<div>Успех</div>"
 }
 
 async function paymentProcess(){

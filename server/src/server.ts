@@ -3,6 +3,9 @@ import { Request, Response } from 'express';
 import { YooCheckout, ICreatePayment } from "@a2seven/yoo-checkout";
 import 'dotenv/config'
 import cors from 'cors'
+import path from 'path';
+
+import { itemRouter } from "./routes/items"
 
 const app = express()
 
@@ -23,7 +26,7 @@ const fetchPaymentCreation = async () => {
             },
             confirmation: {
                 type: "redirect",
-                return_url: "http://localhost:3000/checkout"
+                return_url: "http://localhost:5173/"
             },
             capture: true
         }
@@ -39,7 +42,7 @@ const fetchPaymentCreation = async () => {
 }
 
 app.get("/", (req: Request, res: Response) => {
-    res.send("Хайы")
+    res.sendFile(path.resolve("../index.html"))
 })
 
 app.get("/payment", async (req: Request, res: Response) => {
@@ -56,6 +59,9 @@ app.get("/checkout", async (req: Request, res: Response) => {
         res.errored
     }
 })
+
+app.use(express.json())
+app.use("/api/items", itemRouter)
 
 app.listen(3000, () => {
     console.log(`Server running on port 3000`)
