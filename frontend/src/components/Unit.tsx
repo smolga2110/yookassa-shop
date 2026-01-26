@@ -20,7 +20,8 @@ interface Item {
     category: string,
     name: string,
     price: number,
-    in_stock: boolean
+    in_stock: boolean,
+    image_url: string
 }
 
 interface ApiResponse {
@@ -32,7 +33,12 @@ function Unit(){
     const [error, setError] = useState<string>("")
     const [loading, setLoading] = useState<boolean>(true)
 
-    const {changeId} = useCart()
+    const {changeId, removeId} = useCart()
+
+    const formatter = new Intl.NumberFormat('ru', {
+        style: "currency",
+        currency: "RUB",
+    })
     
 
     useEffect(() => {
@@ -73,13 +79,30 @@ function Unit(){
             {
                 items.map((el) => {
                     return(
-                        <div>
-                            <span>{el.id}</span>
-                            <span>{el.category}</span>
-                            <span>{el.name}</span>
-                            <span>{el.price}</span>
+                        <div className="flex flex-col bg-gray-100 p-2.5 rounded-lg gap-2">
+                            <img src={el.image_url}/>
+                            <div className="flex flex-row items-center gap-2">
+                                <span className="font-bold text-[#10c44c] text-lg">{formatter.format(el.price)}</span>
+                                <span className="line-through text-[#99a3ae]">{formatter.format(el.price + 30000)}</span>
+                            </div>
+                            <div className="flex flex-row gap-2">
+                                <span className="font-medium">{el.name}</span>
+                                <span>|</span>
+                                <span>{el.category}</span>
+                            </div>
                             <span>{el.in_stock}</span>
-                            <button onClick={() => changeId(el.id)}>Добавить в корзину</button>
+                            <button className="" disabled={!el.in_stock} onClick={(event) => {
+                                if (event.currentTarget.textContent === "Добавить в корзину"){
+                                    changeId(el.id);
+                                    event.currentTarget.textContent = "В корзине"
+                                    event.currentTarget.className = "!bg-gray-300 !text-gray-500 hover:text-gray-600!"
+                                }
+                                else{
+                                    removeId(el.id)
+                                    event.currentTarget.textContent = "Добавить в корзину"
+                                    event.currentTarget.className = ""
+                                }
+                                }}>Добавить в корзину</button>
                         </div>
                     )
                 })

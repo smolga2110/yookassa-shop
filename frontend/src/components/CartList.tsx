@@ -69,7 +69,7 @@ function CartList(){
     }, [])
 
     return(
-        <>
+        <div className="flex flex-col gap-2">
             {
                 items.map((el: any) => {
                     return(
@@ -77,9 +77,11 @@ function CartList(){
                     )
                 })
             }
-            <span>{totalPrice}</span>
-            <button onClick={() => fetchPayment()}>Оплатить</button>
-        </>
+            <div className="flex items-center gap-2">
+                <span className="font-bold">{totalPrice}</span>
+                <button onClick={() => fetchPayment()}>Оплатить</button>
+            </div>
+        </div>
     )
 }
 

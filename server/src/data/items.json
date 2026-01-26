@@ -5,70 +5,80 @@
       "category": "Смартфоны",
       "name": "iPhone 15 Pro",
       "price": 109999.00,
-      "in_stock": true
+      "in_stock": true,
+      "image_url": "https://placehold.co/300x200?text=Iphone15"
     },
     {
       "id": 2,
       "category": "Ноутбуки",
       "name": "MacBook Air M2",
       "price": 129999.00,
-      "in_stock": false
+      "in_stock": false,
+      "image_url": "https://placehold.co/300x200?text=MacBook"
     },
     {
       "id": 3,
       "category": "Аксессуары",
       "name": "Чехол для телефона",
       "price": 1999.00,
-      "in_stock": true
+      "in_stock": true,
+      "image_url": "https://placehold.co/300x200?text=Чехол"
     },
     {
       "id": 4,
       "category": "Телевизоры",
       "name": "Samsung QLED 55\"",
       "price": 78999.00,
-      "in_stock": true
+      "in_stock": true,
+      "image_url": "https://placehold.co/300x200?text=Samsung"
     },
     {
       "id": 5,
       "category": "Наушники",
       "name": "Sony WH-1000XM5",
       "price": 34999.00,
-      "in_stock": true
+      "in_stock": true,
+      "image_url": "https://placehold.co/300x200?text=Sony"
     },
     {
       "id": 6,
       "category": "Фотокамеры",
       "name": "Canon EOS R6",
       "price": 189999.00,
-      "in_stock": false
+      "in_stock": false,
+      "image_url": "https://placehold.co/300x200?text=Canon"
     },
     {
       "id": 7,
       "category": "Игровые консоли",
       "name": "PlayStation 5",
       "price": 65999.00,
-      "in_stock": true
+      "in_stock": true,
+      "image_url": "https://placehold.co/300x200?text=PlayStation"
     },
     {
       "id": 8,
       "category": "Умные часы",
       "name": "Apple Watch Series 9",
       "price": 45999.00,
-      "in_stock": true
+      "in_stock": true,
+      "image_url": "https://placehold.co/300x200?text=Watch"
     },
     {
       "id": 9,
       "category": "Планшеты",
       "name": "iPad Air 5",
       "price": 72999.00,
-      "in_stock": true
+      "in_stock": true,
+      "image_url": "https://placehold.co/300x200?text=iPad"
     },
     {
       "id": 10,
       "category": "Аксессуары",
-      "name": "Внешний аккумулятор 20000 mAh",
+      "name": "Внешний аккумулятор",
       "price": 3499.00,
-      "in_stock": true
+      "in_stock": true,
+      "image_url": "https://placehold.co/300x200?text=Аккумулятор"
     }
   ]
 }
